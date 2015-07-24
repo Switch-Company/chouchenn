@@ -1,0 +1,164 @@
+vendor-prefixes = webkit moz o ms
+
+@import '../app/chouchenn'
+
+
+/* ! CSS3
+---------------------------- */
+
+/* animation */
+div
+   animation-name: scale, slide
+   animation-duration: 2s
+   animation-timing-function: ease
+   animation-iteration-count: infinite
+
+   // Animation shorthand works the same as the CSS3 animation shorthand
+   animation: scale 1.0s ease-in, slide 2.0s ease
+
+/* appearance */
+div
+   appearance: none
+
+
+/* backface-visibility */
+div
+   backface-visibility: hidden
+
+
+color1 = #1e5799
+color2 = rgba( 0, 0, 0, .2)
+img-repeat = 0 0
+img-url = '/img/common/'
+
+/* background */
+div
+   background: color1
+   /* */
+   background: rgba( 0, 0, 0, .2) url( img-url + 'images/a.png' ) no-repeat 0 0
+   /* */
+   background: color2 url( img-url + 'images/a.png' ) no-repeat img-repeat
+   /* */
+   background: url( '/images/a.png' ) no-repeat 0 0, url( 'image.png' )
+   /* */
+   background: linear-gradient( top, color1, red )
+   /* */
+   background: radial-gradient(circle at 40% 40%, orange, red), linear-gradient( top, color1, red )
+   /* */
+   background: url( '/images/a.png' ) no-repeat, linear-gradient( orange, red )
+   /* */
+   background: url( 'image.png' ) center center, linear-gradient( orange, red ), url( 'image.png' )
+
+/* border-image */
+div
+   border-image: url( img-url + 'image.png' )
+   /* */
+   border-image: url( 'image.png' ) 20 stretch
+   /* */
+   border-image: linear-gradient( top, color1, red )
+   /* */
+   border-image: linear-gradient( 45deg, orange, yellow ) stretch
+   /* */
+   border-image: linear-gradient( 45deg, orange, yellow ) 20 30 40 50 stretch round
+   /* */
+   border-image: radial-gradient( circle at 40% 40%, orange, red )
+
+/* box-sizing */
+div
+   box-sizing: border-box
+
+/* columns */
+div
+   columns: 12 8em
+   column-rule: 1px solid green
+
+
+/* font face */
+font-face( SourceSansPro, '/fonts/Source_Sans_Pro/SourceSansPro-Regular' )
+font-face( SourceSansPro, '/fonts/Source_Sans_Pro/SourceSansPro-Bold', bold)
+font-face( SourceSansPro, '/fonts/Source_Sans_Pro/SourceSansPro-Italic', normal, italic)
+
+
+/* hyphens */
+div
+   hyphens: manual
+
+/* Linear gradient */
+div
+   background-image: linear-gradient( #1e5799, #2989d8 )
+   background-image: linear-gradient( transparent, rgba( 0, 0, 0, 0.5 ) )
+   background-image: linear-gradient( hsl(0, 80%, 70%), #bada55 )
+   background-image: linear-gradient( to top, #8fdce5, #3dc3d1 )
+   background-image: linear-gradient( bottom, #8fdce5, #3dc3d1 )
+   background-image: linear-gradient( to top left, #8fdce5, #3dc3d1 )
+   background-image: linear-gradient( top left, #8fdce5, #3dc3d1 )
+   background-image: linear-gradient( 50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100% )
+
+
+/* perspective */
+div
+   perspective: 300px
+   perspective-origin: 30% 30%
+
+
+/* placeholder */
+input
+   +placeholder()
+      color: #dddddd
+
+/* transform */
+div
+   transform: translateY( 50px )
+   transform-origin: center top
+   transform-style: preserve-3d
+
+/* Radial gradient */
+div
+   background: radial-gradient( circle 16px at 20px 50%, black 0%, black 14px, rgba( 0, 0, 0, 0.3 ) 18px, rgba( 0, 0, 0, 0 ) 19px )
+
+/* transition */
+anim-easing = 2s ease-in-out
+anim-delay = 2s
+
+div
+   transition: all anim-easing
+   /* */
+   transition: transform anim-delay ease-out-quad
+   /* */
+   transition: transform anim-easing, width anim-delay ease-out-quad 2s
+   /* */
+   transition: width 2.0s ease-out-quad 2s, transform 2.0s ease-in-out
+   /* */
+   transition: opacity 1.0s ease-in 0s, width 2.0s ease-in 2s
+   /* */
+   transition-property: transform, opacity
+   /* */
+   transition-duration: 1.0s
+   /* */
+   transition-timing-function: ease-in
+   /* */
+   transition-delay: 0.5s
+
+/* user-select */
+div
+   user-select: none
+
+
+/* ! ADDONS
+---------------------------- */
+/* clearfix */
+div
+   clearfix()
+
+
+/* triangle */
+div
+   triangle: 15px #000000 down
+
+
+/* visually hide */
+a
+   hide()
+
+   &:focus
+      hide-reset()

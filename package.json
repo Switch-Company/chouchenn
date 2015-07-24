@@ -1,0 +1,67 @@
+{
+  "name": "chouchenn",
+  "title": "Chouchenn",
+  "description": "Lightweight mixin library to get the best of Stylus",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Switch-Company/chouchenn.git"
+  },
+  "keywords": [
+    "stylus",
+    "css",
+    "mixins",
+    "utilities"
+  ],
+  "bugs": {
+    "url": "https://github.com/Switch-Company/chouchenn/issues",
+    "email": "chouchenn@switch.paris"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Switch",
+    "email": "bonjour@switch.paris",
+    "url": "http://switch.paris"
+  },
+  "contributors": [
+    {
+      "name": "Thomas Beduneau",
+      "email": "thomas@switch.paris",
+      "url": "http://enwin.io"
+    },
+    {
+      "name": "Sébastien Dussaut",
+      "email": "sebastien@switch.paris"
+    },
+    {
+      "name": "Adélie Fournier",
+      "email": "mediadelie@gmail.com"
+    },
+    {
+      "name": "Harold Malaud",
+      "email": "harold@switch.paris"
+    },
+    {
+      "name": "Damien Petton",
+      "email": "damien@switch.paris"
+    }
+  ],
+  "homepage": "http://chouchenn.switch.paris",
+  "scripts": {
+    "test": "mocha",
+    "start": "node test/server.js"
+  },
+  "dependencies": {
+    "stylus": "^0.51.1"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "main": "lib/chouchenn.js",
+  "devDependencies": {
+    "connect": "^3.4.0",
+    "jade": "^1.11.0",
+    "mocha": "^2.2.5",
+    "should": "^7.0.1"
+  }
+}

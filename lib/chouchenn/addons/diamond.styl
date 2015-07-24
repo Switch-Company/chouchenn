@@ -1,0 +1,22 @@
+use( '../nodes/sqrt.js' )
+
+diamond( $size, $color, x = false, y = false, $origin = false )
+
+   $dimension = sqrt( ( ( $size / 2 ) * ( $size / 2 ) ) * 2 )
+
+   background-color: $color
+   height: $dimension
+
+   if !x and !y
+      transform: rotate( 45deg )
+   else if x and y
+      transform: translate( x, y ) rotate( 45deg )
+   else if x
+      transform: translateX( x ) rotate( 45deg )
+   else if y
+      transform: translateY( y ) rotate( 45deg )
+
+   if $origin != false
+      transform-origin: $origin
+
+   width: @height

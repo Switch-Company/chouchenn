@@ -1,0 +1,5 @@
+--require should
+--reporter spec
+--check-leaks
+--growl
+test/runner.js

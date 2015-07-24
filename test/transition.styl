@@ -1,0 +1,24 @@
+@import '../app/chouchenn'
+
+anim-easing = 2s ease-in-out
+anim-delay = 2s
+
+/* transition */
+div
+   transition: all anim-easing
+div
+   transition: transform anim-delay ease-out-quad
+div
+   transition: transform anim-easing, width anim-delay ease-out-quad 2s
+div
+   transition: width 2.0s ease-out-quad 2s, transform 2.0s ease-in-out
+div
+   transition: opacity 1.0s ease-in 0s, width 2.0s ease-in 2s
+div
+   transition-property: transform, opacity
+div
+   transition-duration: 1.0s
+div
+   transition-timing-function: ease-in
+div
+   transition-delay: 0.5s

@@ -1,0 +1,11 @@
+use( '../nodes/font.js' )
+
+font-face( $font-family, $file-path, $weight = normal, $style = normal )
+   @font-face
+      font-family: $font-family
+      font-style: $style
+      font-weight: $weight
+      if ( 'eot' in $font-types )
+         src: url( $file-path ".eot" )
+
+      src: fontUrl( $file-path, '' + $font-types, $font-family )
