@@ -1,4 +1,9 @@
 {
+  "globals": {
+    "require": true,
+    "module": true,
+    "Modernizr": true
+  },
   "boss": true,
   "browser": true,
   "curly": true,
