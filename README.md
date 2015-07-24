@@ -1,8 +1,4 @@
 # Chouchenn - Lightweight library of mixins for Stylus
-
-
-# Chouchenn
-
 Lightweight mixin library to help you get the best of Stylus.
 
 ## Installation
