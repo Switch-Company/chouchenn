@@ -94,7 +94,7 @@
 
             Visual:
               id: visual
-              name: Shapes and Visuals Effects
+              name: Shapes and Visual Effects
               items:
                 Diamond:
                   id: diamond
