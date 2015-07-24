@@ -32,9 +32,7 @@ module.exports = function( grunt ) {
 
     if( arg ){
       tasks.push(
-        'sftp-deploy:' + arg,
-        'revision',
-        'slack:done_' + arg
+        'revision'
       );
     }
     grunt.task.run( tasks );
