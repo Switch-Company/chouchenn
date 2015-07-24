@@ -4,13 +4,13 @@
 
   # sites urls
   url:
-    base: /en_US/
-    css: /en_US/css/
-    datas: /en_US/datas/
-    dyn: /en_US/media/dyn/
-    icon: /en_US/media/icons/
-    img: /en_US/media/img/
-    js: /en_US/js/
+    base: en_US/
+    css: en_US/css/
+    datas: en_US/datas/
+    dyn: en_US/media/dyn/
+    icon: en_US/media/icons/
+    img: en_US/media/img/
+    js: en_US/js/
 
   # metas
   meta:
