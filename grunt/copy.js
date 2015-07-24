@@ -14,7 +14,7 @@ module.exports = function( grunt ){
     files: {
       files: [{
           expand: true,
-          src: [ '.htaccess', '.htpasswd', 'favicon.ico' ],
+          src: [ '.htaccess', '.htpasswd', 'favicon.ico', 'CNAME' ],
           dest: '<%= build %>/'
       }]
     },
