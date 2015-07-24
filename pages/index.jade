@@ -1,0 +1,121 @@
+extends _layout/default
+
+block vars
+  - pageType = "home"
+
+block content
+
+  div.intro
+    p!=home.intro.text
+    div.buttons
+      a(href="#documentation").button!= home.intro.buttons.doc
+      a(href=""+ home.intro.git +"").button!= home.intro.buttons.repo
+  div.content
+    button( aria-controls="nav" aria-expanded='false')
+      span Menu
+    nav#nav( role="navigation" )
+      a.logo(href="#header")
+        img(src= url.img +"logo.png" width="230" height="60" alt="")
+      ul
+        each val in home.categories.list
+          li
+            a(href='#'+ val.id +"")!= val.name
+            if val === home.categories.list.mixins
+              ul
+                each subcat in val.subcat
+                  li
+                    a(href='#'+ subcat.id +"")!=subcat.name
+                    ul
+                      each item in subcat.items
+                        li
+                          a(href='#'+ item.id +"")!=item.name
+        li
+          a(href='#footer')!=home.footer.title
+    div.doc
+      each val in home.categories.list
+        section(id=""+ val.id +"")
+          h1!= val.name
+          if val.text
+            p!= val.text
+          if val.texts
+            p!=val.texts.intro
+            if val.texts.list
+              ul
+                each list in val.texts.list
+                  li!= list
+              if val.texts.then
+                p!=val.texts.then
+          if val === home.categories.list.mixins
+            each subcat in home.categories.list.mixins.subcat
+              section.cats(id=""+ subcat.id +"")
+                h2!=subcat.name
+                each item in subcat.items
+                  article(id=""+ item.id +"")
+                    h3!=item.name
+                    if item.text
+                      p!=item.text
+                    if item.texts
+                      p!=item.texts.intro
+                      if item.texts.list
+                        ul
+                          each list in item.texts.list
+                            li!= list
+                      if item.texts.then
+                        p!=item.texts.then
+
+                    p.ex-intro!=val.mixinTitle
+                    div.code
+                      pre
+                        code
+                          - var data = item.stylus
+                          include _includes/code
+
+                    p.ex-intro!=val.resultTitle
+                    div.code
+                      pre
+                        code
+                          - var data = item.css
+                          include _includes/code
+
+                    if item.name === 'Timing-Functions'
+                      p.ex-intro!=item.example.name
+                      div.exemple
+                        each funct in item.example.values
+                          ul(class=""+funct.name+"")
+                            li
+                              span ease-in-#{funct.name}
+
+                            li
+                              span ease-out-#{funct.name}
+
+                            li
+                              span ease-in-out-#{funct.name}
+
+                    if item.name === 'Triangle'
+                      p.ex-intro!=val.exampleTitle
+                      ul.triangles
+                        each value in item.example.values
+                          li
+                            span(class=""+value.name+"")
+                            p!=value.name
+                      if item.tips
+                        p.ex-intro!=val.tipsTitle
+                        p!=item.tips
+
+                    if item.name === 'Diamond'
+                      p.ex-intro!=val.exampleTitle
+                      div.diamonds
+                        div.diamond1
+                        div.diamond2
+                        div.diamond3
+                        div.diamond4
+
+          if val.stylus
+            p.ex-intro!=home.categories.list.settings.example.name
+            div.code
+              pre
+                code
+                  - var data = val.stylus
+                  include _includes/code
+
+

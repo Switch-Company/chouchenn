@@ -1,0 +1,95 @@
+/*
+ *   NAV STYLE
+ */
+
+.home
+   .content
+      .fixed
+         position : fixed
+         top: 0
+      button
+         background-color: transparent
+         background-image: url($url-img menu-icon.png)
+         background-repeat: no-repeat
+         border: none
+         height: 20px
+         top: 0
+         margin: 10px 0 0 10px
+         position: absolute
+         width: @height
+         z-index: 21
+         span
+            hide()
+      .hidden
+         display: none
+
+   nav
+      background-color: $light
+      box-sizing: border-box
+      display: inline
+      height: 100%
+      left:- 300px
+      overflow: auto
+      position: absolute
+      width: 300px
+      z-index: 20
+      transition: 1.2s $ease-out-quint
+
+      &[aria-hidden="false"]
+         left : 0
+         transition: 1.2s $ease-out-quint
+
+
+
+      a
+         text-decoration: none
+         color: $grey
+
+      .logo
+         display: block
+         margin: 60px 15% 40px 15%
+
+         img
+            display: block
+            height: auto
+            margin: 0 auto
+            width: 95%
+      li
+         font-family: $font-sans-serif
+         font-size: 18px
+         list-style: circle
+
+      ul
+
+         padding-left: 60px
+         & > li
+            font-size: em(18 / $font-size)
+            color: $grey
+            margin: 16px 0
+            a
+              color: $grey
+
+
+         ul
+            padding-left: 19px
+            margin-left: -20px
+            & > li
+
+               display: block
+               font-size: em(11 / $font-size)
+               a
+                  margin: 25px 0
+                  color: $dark
+
+            ul
+               padding-left: 50px
+               li
+                  color: $red
+                  display: list-item
+                  font-size: em(10 / $font-size)
+                  padding: 0
+                  a
+                     color: $red
+                     margin: 0
+                     text-align: left
+                     text-decoration: none

@@ -1,0 +1,55 @@
+/*
+ *   HEADER STYLES
+ */
+header[role="banner"]
+   $padding-header= 80px
+   box-sizing: border-box
+   position: relative
+   margin: 0 auto
+   padding-top: $padding-header
+   padding-bottom: $padding-header
+   width: 300px
+
+   &:before
+      background-image: url($url-img logo-start.png)
+      background-repeat: no-repeat
+      background-size: contain
+      content: ""
+      display: inline-block
+      height: 100px
+      position: absolute
+      width:50px
+
+   &:after
+      background-image: url($url-img logo-end.png)
+      background-position: 25px 0px
+      background-repeat: no-repeat
+      background-size: contain
+      content: ""
+      display: inline-block
+      height: 100px
+      position: absolute
+      right: 0
+      top:$padding-header
+      width:50px
+   > h1
+   > p
+      font-family: $font-family
+      font-weight: lighter
+      margin: 0
+      text-align: center
+
+   > h1
+      color: $red
+      font-size: 3em
+      letter-spacing: 1px
+      padding-top:28px
+      text-transform: uppercase
+
+   > p
+      color: $grey
+      font-size: 1em
+      margin-top:16px
+
+      span
+         text-transform: uppercase

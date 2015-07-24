@@ -1,0 +1,9 @@
+mixin ie( condition )
+  | <!--[!{condition}]>
+  block
+  | <![endif]-->
+
+mixin not-ie()
+  | <!--[if (gte IE 9)|!IE]><!-->
+  block
+  | <!--<![endif]-->

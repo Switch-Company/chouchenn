@@ -1,0 +1,200 @@
+/*
+ *   HOME
+ */
+.home
+
+   h2
+      font-size: em(20/$font-size)
+   .intro
+      background-color: $red
+      border-top: 5px solid #d7cf80
+      border-bottom: 5px solid #d7cf80
+      box-sizing: border-box
+      min-height: 300px
+      padding: 30px 40px
+      width: 100%
+      p
+         color: $light
+         font-family: $font-sans-serif
+         font-size: em(28/$font-size)
+         margin: 0
+         text-align: center
+
+
+   .buttons
+      padding: 60px 0 0 0
+      text-align: center
+      a
+         margin: 0 4% 4% 4%
+         text-decoration: none
+
+
+   .content
+      clearfix()
+      position: relative
+
+   .doc
+      background-color: $beige
+      box-sizing: border-box
+      display: block
+      padding : 0 15% 50px 15%
+      vertical-align: top
+      width: 100%
+
+      & > section
+         padding-top: 40px
+         & > h1
+            &:before
+               content: ""
+               display: inline-block
+               background-image: url($url-img beforeTitle.png)
+               background-repeat: no-repeat
+               background-size: contain
+               height: 10px
+               margin-right: 15px
+               vertical-align: middle
+               width: 36px
+
+         .cats
+            padding-top: 30px
+            margin-bottom: 40px
+            article
+               padding-top: 20px
+
+
+   .code
+      background-color: rgba(255,255,255,0.6)
+      border: 2px solid rgba(156,155,151,0.6)
+      box-sizing: border-box
+      margin-bottom: 30px
+      padding: 5px 20px
+
+      pre
+      code
+         overflow: auto
+
+      .tag
+         color: $red
+
+      .mandatory
+      .prop
+         font-weight: bold
+
+      .param
+         color: $green
+      .com
+         color: $grey
+      .class
+         color: $grey
+         font-weight: bold
+
+
+/*exemples*/
+   /*timing functions*/
+   .exemple
+      ul
+         margin-bottom: 20px
+         padding: 0
+         width: 100%
+         li
+            color: $grey
+            display: block
+            font-family: $font-sans-serif
+            margin: 10px 1%
+            position: relative
+            text-align: center
+            width: 100%
+
+            span
+               position: relative
+               z-index: 1
+
+            &:before
+               content:""
+               background-color: $green
+               top: 0
+               height: 100%
+               position: absolute
+               left: 0
+               width: 20px
+               z-index: 0
+
+         &:hover
+            li
+               color: $light
+               &:before
+                  background-color: $red
+                  transition-duration: 1.2s
+                  transition-property: background-color, width
+                  width: 100%
+
+
+      for name in $tab
+         .{name}
+            li
+               transition: color 1.2s $ease-in-+name
+               &:before
+                  transition-duration: 1.2s
+                  transition-property: background-color, width
+               &:first-child
+                  &:before
+                     transition-timing-function: $ease-in-+name
+               &:nth-child(2)
+                  &:before
+                     transition-timing-function: $ease-out-+name
+               &:nth-child(3)
+                  &:before
+                     transition-timing-function: $ease-in-out-+name
+
+
+
+   /*triangles*/
+      .triangles
+         padding: 0
+         li
+            display: inline-block
+            list-style: none
+            margin-bottom: 30px
+            text-align: center
+            width: 48%
+            p
+               font-family: $font-sans-serif
+               font-size: 1em
+
+      for i in (0..length($direction1))
+         .{$direction1[i]}
+            display: inline-block
+            triangle( 50px, $green, $direction1[i] )
+
+      for i in (0..length($direction2))
+         .{$direction2[i]}
+            display: inline-block
+            triangle( 38px, $green, $direction2[i] )
+      .down
+           border-bottom-width: 0
+      .left
+         border-left-width: 0
+
+      .right
+         border-right-width: 0
+
+.diamonds
+   box-sizing: border-box
+   margin: 0 auto
+   max-width: 230px
+   padding: 50px 0
+   div
+      display: inline-block
+   .diamond1
+      diamond( 100px, $green, x: 20px, origin: 100% 100% )
+   .diamond2
+      diamond( 25px, $red, x: 20px, y: -27px, origin: 100% 100% )
+      margin-left: 1%
+   .diamond3
+      diamond( 75px, $green, x: 20px, y: -9px, origin: 100% 100% )
+      margin-left: 1%
+      opacity: 0.5
+   .diamond4
+      diamond( 50px, $red, x: 20px, y: -18px, origin: 100% 100% )
+      margin-left: 1%
+      opacity: 0.8

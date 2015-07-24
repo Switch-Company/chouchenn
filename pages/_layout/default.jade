@@ -1,0 +1,75 @@
+include ../_tools/mixins
+
+block vars
+  - header = true
+
+doctype
+html( class="no-js" lang=lang )
+  head
+    meta( charset="utf-8" )
+    meta( http-equiv="X-UA-Compatible" content="IE=edge" )
+
+    title= title
+
+    //- Mobile
+    meta( name="viewport" content=meta.viewport.join() )
+    meta( name="format-detection" content="telephone=no" )
+
+    //- icons
+    //- http://realfavicongenerator.net/faq#why_ico_not_declared
+    //- link( rel="shortcut icon" href="/favicon.ico" )
+    link( rel="apple-touch-icon" sizes="57x57" href=url.icon+"apple-touch-icon-57x57.png" )
+    link( rel="apple-touch-icon" sizes="60x60" href=url.icon+"apple-touch-icon-60x60.png" )
+    link( rel="apple-touch-icon" sizes="72x72" href=url.icon+"apple-touch-icon-72x72.png" )
+    link( rel="apple-touch-icon" sizes="76x76" href=url.icon+"apple-touch-icon-76x76.png" )
+    link( rel="apple-touch-icon" sizes="114x114" href=url.icon+"apple-touch-icon-114x114.png" )
+    link( rel="apple-touch-icon" sizes="120x120" href=url.icon+"apple-touch-icon-120x120.png" )
+    link( rel="apple-touch-icon" sizes="144x144" href=url.icon+"apple-touch-icon-144x144.png" )
+    link( rel="apple-touch-icon" sizes="152x152" href=url.icon+"apple-touch-icon-152x152.png" )
+    link( rel="apple-touch-icon" sizes="180x180" href=url.icon+"apple-touch-icon-180x180.png" )
+    link( rel="icon" type="image/png" href=url.icon+"favicon-32x32.png" sizes="32x32" )
+    link( rel="icon" type="image/png" href=url.icon+"android-chrome-192x192.png" sizes="192x192" )
+    link( rel="icon" type="image/png" href=url.icon+"favicon-96x96.png" sizes="96x96" )
+    link( rel="icon" type="image/png" href=url.icon+"favicon-16x16.png" sizes="16x16" )
+
+    //- Webapp
+    if webapp
+      meta( name="apple-mobile-web-app-capable" content="yes" )
+      meta( name="apple-mobile-web-app-title" content=title )
+      meta( name="apple-mobile-web-app-status-bar-style" content="black" )
+      link( rel="apple-touch-startup-image" href=url.icon+"ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 1)" )
+      link( rel="apple-touch-startup-image" href=url.icon+"ipad-landscape-retina.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)" )
+
+    //- Microsoft: typography + tile icon and color
+    if msColor
+      link( rel="manifest" href=url.icon+"manifest.json" )
+      meta( name="msapplication-TileColor" content=msColor )
+      meta( name="msapplication-TileImage" content=url.icon+"mstile-144x144.png" )
+      meta( name="theme-color" content="#ffffff" )
+
+    include ../_modules/metas
+
+    block head-styles
+
+    //- Stylesheets
+    link( rel="stylesheet" href=url.css+"styles.css" )
+
+    block head-scripts
+
+    //- Modernizr
+    script( src=url.js+"modernizr.js" )
+
+  body( class=pageType vocab="http://schema.org/" typeof="WebPage" )
+    //-div#fb-root
+
+    block header
+      include ../_modules/header
+
+    main( role="main" )
+      block content
+
+    block footer
+      include ../_modules/footer
+
+    block scripts
+      include ../_modules/scripts

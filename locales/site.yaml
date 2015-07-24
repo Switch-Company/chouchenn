@@ -1,0 +1,47 @@
+---
+  lang: en_US
+  title: Site
+  webapp: false
+  msColor: '#f5eddb'
+  root: /
+  defaultLang: en_US
+
+  # sites urls
+  url:
+    css: css/
+    datas: datas/
+    dyn: media/dyn/
+    icon: media/icons/
+    img: media/img/
+    js: js/
+
+  # Base urls
+  baseUrl:
+    en_US: en_US
+
+  # metas
+  meta:
+    viewport:
+      - width=device-width
+      - initial-scale=1
+
+    # Twitter Card
+    card:
+      default:
+        card: summary_large_image
+        site: 'http://chouchenn.switch.paris'
+        creator: 'Switch Team'
+        title: Chouchenn — Mixin library for Stylus
+        description: 'Chouchenn is a very lightweight mixin library for Stylus. It provides tools to help day-to-day CSS coding: maths and dimensions, positioning, visual effects and text and font helpers.'
+        "image:src": 'http://chouchenn.switch.paris/en_US/media/img/tw-card.png'
+
+    # Facebook Opengraph
+    opengraph:
+      default:
+        title: Chouchenn — Mixin library for Stylus
+        description: 'Chouchenn is a very lightweight mixin library for Stylus. It provides tools to help day-to-day CSS coding: maths and dimensions, positioning, visual effects and text and font helpers.'
+        site_name: Chouchenn website
+        type: website
+        image: 'http://chouchenn.switch.paris/en_US/media/img/fb-card.png'
+        local: en
+        url: 'http://chouchenn.switch.paris'

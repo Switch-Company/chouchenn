@@ -1,0 +1,56 @@
+/*
+ *   HOME-w480+
+ */
+.home
+   .intro
+      p
+         font-size: em(32/$font-size)
+
+   .doc
+      padding : 0 10% 50px
+
+   .exemple
+      ul
+         margin-bottom: 0
+         li
+            display: inline-block
+            width: 30%
+      &:hover
+         li
+            color: $light
+            &:before
+               background-color: $red
+               width: 100%
+
+
+   h2
+      font-size: em(26/$font-size)
+
+.triangles
+   padding: 0
+   li
+      width: 24%
+
+.diamonds
+   box-sizing: border-box
+   max-width: 400px
+   padding: 50px 0
+   div
+      display: inline-block
+
+   .diamond1
+      diamond( 200px, $green, x: 20px, origin: 100% 100% )
+
+   .diamond2
+      diamond( 50px, $red, x: 20px, y: -52px, origin: 100% 100% )
+      margin-left: 1%
+
+   .diamond3
+      diamond( 150px, $green, x: 20px, y: -16px, origin: 100% 100% )
+      margin-left: 1%
+      opacity: 0.5
+
+   .diamond4
+      diamond( 100px, $red, x: 20px, y: -35px, origin: 100% 100% )
+      margin-left: 1%
+      opacity: 0.8

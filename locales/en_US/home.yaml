@@ -1,0 +1,240 @@
+---
+  home:
+    header:
+      title: Chouchenn
+      subtitle: By <span>Switch</span>
+    intro:
+      text: Lightweight mixin library to help you get the best of Stylus
+      git: https://github.com/Switch-Company/chouchenn
+      buttons:
+        doc: Read documentation
+        repo: View on Github
+    footer:
+      title: Credits
+      texts:
+        what: Chouchenn is brought to you by <a href="http://switch-company.com" title="Visit our company website">Switch</a>, a small front-end development company based in Paris. Come and say hi on <a href="https://twitter.com/switch_company">Twitter</a>.
+        copyright: Switch — 2015
+
+    categories:
+      list:
+        presentation:
+          id: presentation
+          name: About
+          texts:
+            intro: 'Chouchenn is a very lightweight mixin library for <a href="https://learnboost.github.io/stylus/">Stylus</a>. It provides tools to help day-to-day CSS coding:'
+            list:
+              item1: maths and dimensions
+              item2: positioning
+              item3: visual effects like custom timing functions
+              item4: text and font helpers
+        install:
+          id: install
+          name: Basic Installation
+          texts:
+            intro: You can download Chouchenn or clone it from the <a href="https://github.com/Switch-Company/chouchenn">Github repository</a>. The main files are located in the <code>lib/chouchenn/</code> folder.
+            list:
+              item1: Drop Chouchenn in your project folder (even the root index.styl file).
+              item2: "Import it from your main Stylus file like so: <code> @import 'path/to/chouchenn' </code>"
+              item3: Have fun!
+
+        # npmInstall:
+        #   id: npmInstall
+        #   name: Install via NPM
+        #   texts:
+        #     intro: Chouchenn is also available through NPM.
+        #     list:
+        #       item1: Install it via <code>npm install chouchenn</code>.
+        #       item2: Import it in your favorite task manager. Check the example for a sample stylus task with Grunt.
+        #       item3: Have fun!
+        #   stylus: npm
+
+
+        mixins:
+          id: documentation
+          name: Documentation
+          mixinTitle: "What you write:"
+          resultTitle: "What you get:"
+          exampleTitle: "Example:"
+          tipsTitle: "Tips:"
+          subcat:
+            Maths:
+              id: maths-dimensions
+              name: Maths and Dimensions
+              items:
+                Percent:
+                  id: percent
+                  name: Percentage
+                  text: This mixin translates a value to a percentage value. Useful to keep code readable.
+                  stylus: percentStyl
+                  css: percentCss
+                Round:
+                  id: round
+                  name: Round
+                  text: Assists with value calculations. Furthermore, the code is also more maintainable and readable.<br/>The <code>$rounding</code> global variable can be used to adjust rounding decimals as needed. Defaults to 3 decimals.
+                  stylus: rndStyl
+                  css: rndCss
+
+            Positioning:
+              id: positioning
+              name: Positioning
+              items:
+                Clearfix:
+                  id: clearfix
+                  name: Clearfix
+                  text: Outputs a micro clearfix to clear your floats.
+                  stylus: clearfixStyl
+                  css: clearfixCss
+
+                Vertical align:
+                  id: valign
+                  name: Vertical Align
+                  text: 'Provides a "ghost" reference element to vertically align all sibling elements.<br/>Note: all sibling elements must have their <code>vertical-align</code> property set.'
+                  stylus: valignStyl
+                  css: valignCss
+
+            Visual:
+              id: visual
+              name: Shapes and Visuals Effects
+              items:
+                Diamond:
+                  id: diamond
+                  name: Diamond
+                  text: "Draws diamond-shaped block with CSS (it’s trendy these days). It takes up to five parameters, the first two being <strong>mandatory</strong>:"
+                  stylus: diamondStyl
+                  css: diamondCss
+
+                Hide:
+                  id: hide
+                  name: Hide
+                  texts:
+                    intro: "Visually hides content. You can use it for image replacement. The benefits of this mixin are:"
+                    list:
+                      item1: Hidden text remains accessible by screen readers.
+                      item2: The browser does not draw a huge box (like it does with the <code>left:-9999px;</code> technique) and no weird outline either.
+                      item3: Hidden element does not interfere with page flow.
+                    then: 'Chouchenn also provides a reverse mixin called <a href="#hideReset"><code>hide-reset()</code></a> to cancel the hiding.'
+                  stylus: hideStyl
+                  css: hideCss
+
+                HideReset:
+                  id: hideReset
+                  name: Hide-Reset
+                  text: 'Cancels out the effects of the <a href="#hide"><code>hide()</code></a> mixin.'
+                  stylus: hideResetStyl
+                  css: hideResetCss
+
+                Triangle:
+                  id: triangle
+                  name: Triangle
+                  text: "Generates CSS triangles.<br/>Available direction values: <code>up</code>, <code>down</code>, <code>left</code>, <code>right</code>, <code>up-left</code>, <code>up-right</code>, <code>down-left</code> and <code>down-right</code>."
+                  stylus: triangleStyl
+                  css: triangleCss
+                  example:
+                    name: "Example:"
+                    values:
+                      up:
+                        name: up
+                      down:
+                        name: down
+                      left:
+                        name: left
+                      right:
+                        name: right
+                      upLeft:
+                        name: up-left
+                      upRight:
+                        name: up-right
+                      downLeft:
+                        name: down-left
+                      downRight:
+                        name: down-right
+
+                  # tips:
+
+                TimingFunctions:
+                  id: timing
+                  name: Timing-Functions
+                  text: "Defines variables to extend the timing functions initially provided by CSS (based upon jQuery UI timing functions).<br/>Chouchenn provides variants for <code>ease-in</code>, <code>ease-out</code> and <code>ease-in-out</code> to use in your stylesheets:"
+                  stylus: timingStyl
+                  css: timingCss
+                  example:
+                    name: "All available timing functions:"
+                    values:
+                      quad:
+                        name: quad
+                      cubic:
+                        name: cubic
+                      quart:
+                        name: quart
+                      quint:
+                        name: quint
+                      sine:
+                        name: sine
+                      expo:
+                        name: expo
+                      circ:
+                        name: circ
+                      back:
+                        name: back
+
+            Texts:
+              id: texts
+              name: Text and Font Properties
+              items:
+
+                FontFace:
+                  id: fontface
+                  name: Font-Face
+                  text: 'Easy and shorter way to import your different custom fonts. Please refer to the <a href="#settings">Settings</a> section to understand how to change the font types and their order.'
+                  stylus: fontStyl
+                  css: fontCss
+
+                LineHeight:
+                  id: lh
+                  name: Line Height
+                  text: Does the <code>line-height</code> maths for you. The mixins takes the context <code>font-size</code> value as a unique parameter.<br/>This mixin adds the <code>$lh-base</code> variable value to the <code>font-size</code> provided, divides the sum by the font-size value and returns the result of the calculation. <code>$lh-base</code> defaults to 4.
+                  stylus: lhStyl
+                  css: lhCss
+
+                em-size:
+                  id: em-size
+                  name: EM Size
+                  text: Returns the result of the calculation in <code>em</code>s.
+                  stylus: emStyl
+                  css: emCss
+
+                rem-size:
+                  id: rem-size
+                  name: REM Size
+                  text: Returns the value passed as a parameter in <code>rem</code>. Uses the <code>$rem-base</code> variable to do the maths (in case you redefine the root <code>font-size</code> of the page). This variable defaults to 16px.
+                  stylus: remStyl
+                  css: remCss
+
+
+
+        settings:
+          id: settings
+          name: Settings
+          texts:
+            intro: "In addition to the mixins, Chouchenn provides several configuration settings to give you more control over the way mixins behave."
+            list:
+              item1: '<code>$font-type</code>: sets the font-face formats and their order. Used in the <a href="#fontface">font-face mixin</a>.'
+              item2: '<code>$rounding</code>: adjusts the <a href="#round">rounding mixin</a> decimal numbers.'
+              item3: '<code>$lh-base</code>: sets the value added to the font-size of the <a href="#lh">line-height mixin</a>.'
+              item4: '<code>$rem-base</code>: sets the base font-size reference for the <a href="#rem-size">rem-size mixin</a>.'
+          example:
+            name: "Global variables default values:"
+
+          stylus: config
+
+        Tips:
+          id: tips
+          name: Switch's tips
+          text: 'Chouchenn is a tool library. It is not (and never will be) intended to support prefixes or special syntaxes, etc. There are better tools for this (like <a href="https://github.com/postcss/autoprefixer">autoprefixer</a>) and we strongly encourage you to use them in addition of Chouchenn.'
+
+        Licence:
+          id: licence
+          name: Licence
+          text: "Chouchenn is free software and licenced under the BSD licence. For more details, please refer to the LICENCE file."
+
+

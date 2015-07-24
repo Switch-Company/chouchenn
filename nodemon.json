@@ -1,0 +1,4 @@
+{
+  "ext": "js json yaml",
+  "ignore": [ "publish/*", "scripts/*", "node_modules/*", "grunt/*"]
+}

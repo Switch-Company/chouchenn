@@ -1,0 +1,393 @@
+case data
+
+  //- clearfix stylus
+  when 'clearfixStyl'
+    span.tag div<br/>
+    span   clearfix()
+
+  //- clearfix css
+  when 'clearfixCss'
+    span.tag div
+    span :after {<br/>
+    span.prop   clear:
+    span  both;<br/>
+    span.prop   content:
+    span  "";<br/>
+    span.prop   display:
+    span  table;<br/>
+    span }
+
+  //-diamond stylus
+  when 'diamondStyl'
+    span.tag div<br/>
+    span.com
+      span   //diamond( size, color, [translateX], [translateY], [transformOrigin] ), for exemple :<br/>
+    span   diamond(
+    span.param.mandatory  40px
+    span ,
+    span.param.mandatory  #dddddd
+    span ,
+    span.param  x: 20px
+    span ,
+    span.param  origin: 100% 100%
+    span  )
+
+  //-diamond css
+  when 'diamondCss'
+    span.tag div
+    span  { <br/>
+    span.prop   background-color:
+    span  #ddd;<br/>
+    span.prop   height:
+    span  28.284271247461902px;<br/>
+    span.prop   transform:
+    span translateX(20px) rotate(45deg);<br/>
+    span.prop   transform-origin:
+    span  100% 100%;<br/>
+    span.prop   width:
+    span  28.284271247461902px;<br/>
+    span }
+
+  //- timing function stylus
+  when 'timingStyl'
+    span.tag div<br/>
+    span.prop   transition:
+    span.param  width 1.2s ease-in-out-quart
+
+  //- timing function css
+  when 'timingCss'
+    span.tag div
+    span  {<br/>
+    span.prop   transition:
+    span.param  width 1.2s
+    span.param.mandatory  cubic-bezier(0.77, 0, 0.175, 1)
+    span ;<br/>
+    span }
+
+  //- triangle stylus
+  when 'triangleStyl'
+    span.tag span
+    span.class .triangle<br/>
+    span   triangle(
+    span.param  25px
+    span ,
+    span.param  #808080
+    span ,
+    span.param  up-right
+    span  )
+
+  //- triangle css
+  when 'triangleCss'
+    span.tag div
+    span  {<br/>
+    span.prop   border-left:
+    span.param  25px solid transparent;<br/>
+    span.prop   border-top:
+    span.param  25px solid #808080;<br/>
+    span.prop   height:
+    span  0;<br/>
+    span.prop   width:
+    span  0;<br/>
+    span }
+
+  //- hide stylus
+  when 'hideStyl'
+    span.tag h1 span<br/>
+    span   hide()
+
+  //- hide css
+  when 'hideCss'
+    span.tag h1 span
+    span  {<br/>
+    span.prop   clip:
+    span  rect(0 0 0 0);<br/>
+    span.prop   height:
+    span  1px;<br/>
+    span.prop   margin:
+    span  -1px;<br/>
+    span.prop   overflow:
+    span  hidden;<br/>
+    span.prop   padding:
+    span  0;<br/>
+    span.prop   position:
+    span  absolute;<br/>
+    span.prop   width:
+    span  1px;<br/>
+    span }
+
+  //- hide reset stylus
+  when 'hideResetStyl'
+    span.tag h1 span<br/>
+    span   hide-reset()
+
+  //- hide reset css
+  when 'hideResetCss'
+    span.tag h1 span
+    span  {<br/>
+    span.prop   clip:
+    span  auto;<br/>
+    span.prop   height:
+    span  auto;<br/>
+    span.prop   margin:
+    span  0;<br/>
+    span.prop   overflow:
+    span  visible;<br/>
+    span.prop   position:
+    span  static;<br/>
+    span.prop   width:
+    span  auto;<br/>
+    span }
+
+  //- line-height stylus
+  when 'lhStyl'
+    span.com // let's assume the font-size is 28px<br/>
+    span.tag p<br/>
+    span.prop   line-height:
+    span  lh(
+    span.param  28
+    span  )
+
+  //- line-height css
+  when 'lhCss'
+    span.tag p
+    span  {<br/>
+    span.prop   line-height:
+    span  1.143;<br/>
+    span }
+
+  //- em-size stylus
+  when 'emStyl'
+    span.tag p<br/>
+    span.prop   font-size:
+    span  em(
+    span.param  12
+    span  /
+    span.param  16
+    span  )
+
+  //- em-size css
+  when 'emCss'
+    span.tag p
+    span  {<br/>
+    span.prop   font-size:
+    span  0.75em;<br/>
+    span }
+
+  //- percent stylus
+  when 'percentStyl'
+    span.tag p<br/>
+    span.prop   width:
+    span  pct(
+    span.param  280 / 320
+
+    span  )
+
+  //- percent css
+  when 'percentCss'
+    span.tag p
+    span  {<br/>
+    span.prop   width:
+    span  87.5%;<br/>
+    span }
+
+  //- rem-size stylus
+  when 'remStyl'
+    span.tag p<br/>
+    span.prop   font-size:
+    span  rem(
+    span.param  10
+
+    span  )
+
+  //- rem-size css
+  when 'remCss'
+    span.tag p
+    span  {<br/>
+    span.prop   font-size:
+    span  0.625rem;<br/>
+    span }
+
+  //- round stylus
+  when 'rndStyl'
+    span.param.mandatory $rounding
+    span
+    |  = 3<br/>
+    span.tag div<br/>
+    span.prop   padding:
+    span  rnd( 7em / 9 ) rnd( 34em / 9 )
+
+  //- round css
+  when 'rndCss'
+    span.tag div
+    span  {<br/>
+    span.prop   padding:
+    span  0.778em 3.778em;<br/>
+    span }
+
+  //- vertical align stylus
+  when 'valignStyl'
+    span.tag div<br/>
+    span   &amp;:before<br/>
+    span      valign()
+
+  //-  vertical align css
+  when 'valignCss'
+    span.tag div
+    span :before {<br/>
+    span.prop   content:
+    span  "";<br/>
+    span.prop   display:
+    span  inline-block;<br/>
+    span.prop   height:
+    span  100%;<br/>
+    span.prop   vertical-align:
+    span  middle;<br/>
+    span.prop   width:
+    span  0;<br/>
+    span }
+
+  //- fontface stylus
+  when 'fontStyl'
+    span.tag $url =
+    span.param '/fonts/Source_Sans_Pro/'<br/>
+    span.tag $name =
+    span.param 'SourceSansPro-Regular'<br/>
+    span.prop fontface
+    span (
+    span.param  SourceSansPro
+    span ,
+    span.param  '/fonts/Source_Sans_Pro/SourceSansPro-Regular'
+    span  )<br/>
+    span.prop fontface
+    span (
+    span.param  SourceSansPro
+    span ,
+    span.tag  $url
+    span  +
+    span.tag  $name
+    span  )<br/>
+    span.prop fontface
+    span (
+    span.param  SourceSansPro
+    span ,
+    span.param  '/fonts/Source_Sans_Pro/SourceSansPro-Bold'
+    span ,
+    span.param  bold
+    span  )<br/>
+    span.prop fontface
+    span (
+    span.param  SourceSansPro
+    span ,
+    span.param  '/fonts/Source_Sans_Pro/SourceSansPro-Italic'
+    span ,
+    span.param  normal
+    span ,
+    span.param  italic
+    span  )<br/>
+
+  //- fontface css
+  when 'fontCss'
+    span.tag.mandatory @font-face
+    span {<br/>
+    span.prop   font-family:
+    span  SourceSansPro;<br/>
+    span.prop   font-style:
+    span  normal;<br/>
+    span.prop   font-weight:
+    span  normal;<br/>
+    span.prop   src:
+    span  url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.eot");<br/>
+    span.prop   src:
+    span  url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.eot?#iefix") format("embedded-opentype"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.woff") format("woff"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf") format("truetype"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.svg#SourceSansPro") format("svg");<br/>
+    span }<br/><br/>
+    span.tag.mandatory @font-face
+    span {<br/>
+    span.prop   font-family:
+    span  SourceSansPro;<br/>
+    span.prop   font-style:
+    span  normal;<br/>
+    span.prop   font-weight:
+    span  normal;<br/>
+    span.prop   src:
+    span  url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.eot");<br/>
+    span.prop   src:
+    span  url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.eot?#iefix") format("embedded-opentype"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.woff") format("woff"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf") format("truetype"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.svg#SourceSansPro") format("svg");<br/>
+    span }<br/><br/>
+    span.tag.mandatory @font-face
+    span {<br/>
+    span.prop   font-family:
+    span  SourceSansPro;<br/>
+    span.prop   font-style:
+    span  normal;<br/>
+    span.prop   font-weight:
+    span  normal;<br/>
+    span.prop   src:
+    span  url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.eot");<br/>
+    span.prop   src:
+    span  url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.eot?#iefix") format("embedded-opentype"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.woff") format("woff"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf") format("truetype"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.svg#SourceSansPro") format("svg");<br/>
+    span }<br/><br/>
+    span.tag.mandatory @font-face
+    span {<br/>
+    span.prop   font-family:
+    span  SourceSansPro;<br/>
+    span.prop   font-style:
+    span  normal;<br/>
+    span.prop   font-weight:
+    span  normal;<br/>
+    span.prop   src:
+    span  url("/fonts/Source_Sans_Pro/SourceSansPro-Italic.eot");<br/>
+    span.prop   src:
+    span  url("/fonts/Source_Sans_Pro/SourceSansPro-Italic.eot?#iefix") format("embedded-opentype"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Italic.woff") format("woff"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf") format("truetype"),<br/>
+    span url("/fonts/Source_Sans_Pro/SourceSansPro-Italic.svg#SourceSansPro") format("svg");<br/>
+    span }<br/><br/>
+
+  when 'config'
+    span.param $font-type
+    span      ?= eot woff ttf svg<br/>
+    span.param $rounding
+    span       ?= 3<br/>
+    span.param $lh-base
+    span        ?= 4<br/>
+    span.param $rem-base
+    span       ?= 16
+
+  when 'npm'
+    span var
+    span  chouchenn = require(
+    span.tag 'chouchenn'
+    span );<br/>
+    span module.exports =
+    span.param.mandatory  function
+    span () {<br/>
+    span.param.mandatory    return
+    span  { <br/>
+    span      dev:{ <br/>
+    span        files: { <br/>
+    span          src:
+    span.tag  'styles.styl'
+    span , <br/>
+    span          dest:
+    span.tag  'styles.css' <br/>
+    span        },<br/>
+    span        options: { <br/>
+    span.tag         'use'
+    span : [ chouchenn ], <br/>
+    span.tag         'import'
+    span : [
+    span.tag 'chouchenn'
+    span ] <br/>
+    span        } <br/>
+    span      } <br/>
+    span    }; <br/>
+    span  };
