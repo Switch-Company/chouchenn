@@ -1,12 +1,4 @@
 {
-  "globals": {
-    "$": true,
-    "define": true,
-    "require": true,
-    "Modernizr": true,
-    "Backbone": true,
-    "_": true
-  },
   "boss": true,
   "browser": true,
   "curly": true,
