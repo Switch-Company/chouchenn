@@ -37,16 +37,18 @@
               item2: "Import it from your main Stylus file like so: <code> @import 'path/to/chouchenn' </code>"
               item3: Have fun!
 
-        # npmInstall:
-        #   id: npmInstall
-        #   name: Install via NPM
-        #   texts:
-        #     intro: Chouchenn is also available through NPM.
-        #     list:
-        #       item1: Install it via <code>npm install chouchenn</code>.
-        #       item2: Import it in your favorite task manager. Check the example for a sample stylus task with Grunt.
-        #       item3: Have fun!
-        #   stylus: npm
+        npmInstall:
+          id: npmInstall
+          name: Install via NPM
+          texts:
+            intro: Chouchenn is also available through NPM.
+            list:
+              item1: Install it via <code>npm install chouchenn</code>.
+              item2: Import it in your favorite task manager. Check the example for a sample stylus task with Grunt.
+              item3: Have fun!
+          example:
+            name: "Example:"
+            stylus: npm
 
 
         mixins:

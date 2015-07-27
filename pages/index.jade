@@ -110,6 +110,14 @@ block content
                         div.diamond3
                         div.diamond4
 
+          if val.id === 'npmInstall'
+            p.ex-intro!=home.categories.list.npmInstall.example.name
+            div.code
+              pre
+                code
+                  - var data = val.example.stylus
+                  include _includes/code
+
           if val.stylus
             p.ex-intro!=home.categories.list.settings.example.name
             div.code
