@@ -4,7 +4,7 @@ module.exports = function( grunt ){
   require( 'time-grunt' )( grunt );
 
   // test GIT branch: if release, publish folder name = "release", else "publish"
-  var buildDir = 'release/',
+  var buildDir = 'publish/',
       jadeVars = {},
       langs = {},
       baseVars = grunt.file.readYAML( 'locales/site.yaml' );

@@ -57,6 +57,8 @@
             </li>
             <li><a href="#install">Basic Installation</a>
             </li>
+            <li><a href="#npmInstall">Install via NPM</a>
+            </li>
             <li><a href="#documentation">Documentation</a>
               <ul>
                 <li><a href="#maths-dimensions">Maths and Dimensions</a>
@@ -118,6 +120,19 @@
               <li>Import it from your main Stylus file like so: <code> @import 'path/to/chouchenn' </code></li>
               <li>Have fun!</li>
             </ul>
+          </section>
+          <section id="npmInstall">
+            <h1>Install via NPM</h1>
+            <p>Chouchenn is also available through NPM.</p>
+            <ul>
+              <li>Install it via <code>npm install chouchenn</code>.</li>
+              <li>Import it in your favorite task manager. Check the example for a sample stylus task with Grunt.</li>
+              <li>Have fun!</li>
+            </ul>
+            <p class="ex-intro">Example:</p>
+            <div class="code">
+              <pre><code><span>var</span><span> chouchenn = require(</span><span class="tag">'chouchenn'</span><span>);<br/></span><span>module.exports =</span><span class="param mandatory"> function</span><span>() {<br/></span><span class="param mandatory">   return</span><span> { <br/></span><span>     dev:{ <br/></span><span>       files: { <br/></span><span>         src:</span><span class="tag"> 'styles.styl'</span><span>, <br/></span><span>         dest:</span><span class="tag"> 'styles.css' <br/></span><span>       },<br/></span><span>       options: { <br/></span><span class="tag">        'use'</span><span>: [ chouchenn ], <br/></span><span class="tag">        'import'</span><span>: [</span><span class="tag">'chouchenn'</span><span>] <br/></span><span>       } <br/></span><span>     } <br/></span><span>   }; <br/></span><span> };</span></code></pre>
+            </div>
           </section>
           <section id="documentation">
             <h1>Documentation</h1>
