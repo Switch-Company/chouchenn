@@ -65,5 +65,6 @@ Made with care by the [Switch Team](https://github.com/Switch-Company), composed
   - [Sébastien Dussaut](https://github.com/sdussaut)
   - [Harold Malaud](https://github.com/hmalaud)
   - [Damien Petton](https://github.com/dpetton)
+  - Adélie Fournier
 
 
