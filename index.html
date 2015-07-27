@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chouchenn — Mixin library for Stylus</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="apple-touch-icon" sizes="57x57" href="en_US/media/icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="en_US/media/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="en_US/media/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="en_US/media/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="en_US/media/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="en_US/media/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="en_US/media/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="en_US/media/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="en_US/media/icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="en_US/media/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="en_US/media/icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="en_US/media/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="en_US/media/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="en_US/media/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#f5eddb">
+    <meta name="msapplication-TileImage" content="en_US/media/icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="http://chouchenn.switch.paris">
+    <meta name="twitter:creator" content="Switch Team">
+    <meta name="twitter:title" content="Chouchenn — Mixin library for Stylus">
+    <meta name="twitter:description" content="Chouchenn is a very lightweight mixin library for Stylus. It provides tools to help day-to-day CSS coding: maths and dimensions, positioning, visual effects and text and font helpers.">
+    <meta name="twitter:image:src" content="http://chouchenn.switch.paris/en_US/media/img/tw-card.png">
+    <meta name="og:title" content="Chouchenn — Mixin library for Stylus">
+    <meta name="og:description" content="Chouchenn is a very lightweight mixin library for Stylus. It provides tools to help day-to-day CSS coding: maths and dimensions, positioning, visual effects and text and font helpers.">
+    <meta name="og:site_name" content="Chouchenn website">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="http://chouchenn.switch.paris/en_US/media/img/fb-card.png">
+    <meta name="og:local" content="en">
+    <meta name="og:url" content="http://chouchenn.switch.paris">
+    <link rel="stylesheet" href="en_US/css/styles.css">
+    <script src="en_US/js/modernizr.js"></script>
+  </head>
+  <body vocab="http://schema.org/" typeof="WebPage" class="home">
+    <header id="header" role="banner">
+      <h1>Chouchenn</h1>
+      <p>By <span>Switch</span></p>
+    </header>
+    <main role="main">
+      <div class="intro">
+        <p>Lightweight mixin library to help you get the best of Stylus</p>
+        <div class="buttons"><a href="#documentation" class="button">Read documentation</a><a href="https://github.com/Switch-Company/chouchenn" class="button">View on Github</a></div>
+      </div>
+      <div class="content">
+        <button aria-controls="nav" aria-expanded="false"><span>Menu</span></button>
+        <nav id="nav" role="navigation"><a href="#header" class="logo"><img src="en_US/media/img/logo.png" width="230" height="60" alt=""></a>
+          <ul>
+            <li><a href="#presentation">About</a>
+            </li>
+            <li><a href="#install">Basic Installation</a>
+            </li>
+            <li><a href="#npmInstall">Install via NPM</a>
+            </li>
+            <li><a href="#documentation">Documentation</a>
+              <ul>
+                <li><a href="#maths-dimensions">Maths and Dimensions</a>
+                  <ul>
+                    <li><a href="#percent">Percentage</a></li>
+                    <li><a href="#round">Round</a></li>
+                  </ul>
+                </li>
+                <li><a href="#positioning">Positioning</a>
+                  <ul>
+                    <li><a href="#clearfix">Clearfix</a></li>
+                    <li><a href="#valign">Vertical Align</a></li>
+                  </ul>
+                </li>
+                <li><a href="#visual">Shapes and Visual Effects</a>
+                  <ul>
+                    <li><a href="#diamond">Diamond</a></li>
+                    <li><a href="#hide">Hide</a></li>
+                    <li><a href="#hideReset">Hide-Reset</a></li>
+                    <li><a href="#triangle">Triangle</a></li>
+                    <li><a href="#timing">Timing-Functions</a></li>
+                  </ul>
+                </li>
+                <li><a href="#texts">Text and Font Properties</a>
+                  <ul>
+                    <li><a href="#fontface">Font-Face</a></li>
+                    <li><a href="#lh">Line Height</a></li>
+                    <li><a href="#em-size">EM Size</a></li>
+                    <li><a href="#rem-size">REM Size</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#settings">Settings</a>
+            </li>
+            <li><a href="#tips">Switch's tips</a>
+            </li>
+            <li><a href="#licence">Licence</a>
+            </li>
+            <li><a href="#footer">Credits</a></li>
+          </ul>
+        </nav>
+        <div class="doc">
+          <section id="presentation">
+            <h1>About</h1>
+            <p>Chouchenn is a very lightweight mixin library for <a href="https://learnboost.github.io/stylus/">Stylus</a>. It provides tools to help day-to-day CSS coding:</p>
+            <ul>
+              <li>maths and dimensions</li>
+              <li>positioning</li>
+              <li>visual effects like custom timing functions</li>
+              <li>text and font helpers</li>
+            </ul>
+          </section>
+          <section id="install">
+            <h1>Basic Installation</h1>
+            <p>You can download Chouchenn or clone it from the <a href="https://github.com/Switch-Company/chouchenn">Github repository</a>. The main files are located in the <code>lib/chouchenn/</code> folder.</p>
+            <ul>
+              <li>Drop Chouchenn in your project folder (even the root index.styl file).</li>
+              <li>Import it from your main Stylus file like so: <code> @import 'path/to/chouchenn' </code></li>
+              <li>Have fun!</li>
+            </ul>
+          </section>
+          <section id="npmInstall">
+            <h1>Install via NPM</h1>
+            <p>Chouchenn is also available through NPM.</p>
+            <ul>
+              <li>Install it via <code>npm install chouchenn</code>.</li>
+              <li>Import it in your favorite task manager. Check the example for a sample stylus task with Grunt.</li>
+              <li>Have fun!</li>
+            </ul>
+            <p class="ex-intro">Example:</p>
+            <div class="code">
+              <pre><code><span>var</span><span> chouchenn = require(</span><span class="tag">'chouchenn'</span><span>);<br/></span><span>module.exports =</span><span class="param mandatory"> function</span><span>() {<br/></span><span class="param mandatory">   return</span><span> { <br/></span><span>     dev:{ <br/></span><span>       files: { <br/></span><span>         src:</span><span class="tag"> 'styles.styl'</span><span>, <br/></span><span>         dest:</span><span class="tag"> 'styles.css' <br/></span><span>       },<br/></span><span>       options: { <br/></span><span class="tag">        'use'</span><span>: [ chouchenn ], <br/></span><span class="tag">        'import'</span><span>: [</span><span class="tag">'chouchenn'</span><span>] <br/></span><span>       } <br/></span><span>     } <br/></span><span>   }; <br/></span><span> };</span></code></pre>
+            </div>
+          </section>
+          <section id="documentation">
+            <h1>Documentation</h1>
+            <section id="maths-dimensions" class="cats">
+              <h2>Maths and Dimensions</h2>
+              <article id="percent">
+                <h3>Percentage</h3>
+                <p>This mixin translates a value to a percentage value. Useful to keep code readable.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">p<br/></span><span class="prop">  width:</span><span> pct(</span><span class="param"> 280 / 320</span><span> )</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">p</span><span> {<br/></span><span class="prop">  width:</span><span> 87.5%;<br/></span><span>}</span></code></pre>
+                </div>
+              </article>
+              <article id="round">
+                <h3>Round</h3>
+                <p>Assists with value calculations. Furthermore, the code is also more maintainable and readable.<br/>The <code>$rounding</code> global variable can be used to adjust rounding decimals as needed. Defaults to 3 decimals.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="param mandatory">$rounding</span><span></span> = 3<br/><span class="tag">div<br/></span><span class="prop">  padding:</span><span> rnd( 7em / 9 ) rnd( 34em / 9 )</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">div</span><span> {<br/></span><span class="prop">  padding:</span><span> 0.778em 3.778em;<br/></span><span>}</span></code></pre>
+                </div>
+              </article>
+            </section>
+            <section id="positioning" class="cats">
+              <h2>Positioning</h2>
+              <article id="clearfix">
+                <h3>Clearfix</h3>
+                <p>Outputs a micro clearfix to clear your floats.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">div<br/></span><span>  clearfix()</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">div</span><span>:after {<br/></span><span class="prop">  clear:</span><span> both;<br/></span><span class="prop">  content:</span><span> "";<br/></span><span class="prop">  display:</span><span> table;<br/></span><span>}</span></code></pre>
+                </div>
+              </article>
+              <article id="valign">
+                <h3>Vertical Align</h3>
+                <p>Provides a "ghost" reference element to vertically align all sibling elements.<br/>Note: all sibling elements must have their <code>vertical-align</code> property set.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">div<br/></span><span>  &amp;:before<br/></span><span>     valign()</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">div</span><span>:before {<br/></span><span class="prop">  content:</span><span> "";<br/></span><span class="prop">  display:</span><span> inline-block;<br/></span><span class="prop">  height:</span><span> 100%;<br/></span><span class="prop">  vertical-align:</span><span> middle;<br/></span><span class="prop">  width:</span><span> 0;<br/></span><span>}</span></code></pre>
+                </div>
+              </article>
+            </section>
+            <section id="visual" class="cats">
+              <h2>Shapes and Visual Effects</h2>
+              <article id="diamond">
+                <h3>Diamond</h3>
+                <p>Draws diamond-shaped block with CSS (it’s trendy these days). It takes up to five parameters, the first two being <strong>mandatory</strong>:</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">div<br/></span><span class="com"><span>  //diamond( size, color, [translateX], [translateY], [transformOrigin] ), for exemple :<br/></span></span><span>  diamond(</span><span class="param mandatory"> 40px</span><span>,</span><span class="param mandatory"> #dddddd</span><span>,</span><span class="param"> x: 20px</span><span>,</span><span class="param"> origin: 100% 100%</span><span> )</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">div</span><span> { <br/></span><span class="prop">  background-color:</span><span> #ddd;<br/></span><span class="prop">  height:</span><span> 28.284271247461902px;<br/></span><span class="prop">  transform:</span><span>translateX(20px) rotate(45deg);<br/></span><span class="prop">  transform-origin:</span><span> 100% 100%;<br/></span><span class="prop">  width:</span><span> 28.284271247461902px;<br/></span><span>}</span></code></pre>
+                </div>
+                <p class="ex-intro">Example:</p>
+                <div class="diamonds">
+                  <div class="diamond1"></div>
+                  <div class="diamond2"></div>
+                  <div class="diamond3"></div>
+                  <div class="diamond4"></div>
+                </div>
+              </article>
+              <article id="hide">
+                <h3>Hide</h3>
+                <p>Visually hides content. You can use it for image replacement. The benefits of this mixin are:</p>
+                <ul>
+                  <li>Hidden text remains accessible by screen readers.</li>
+                  <li>The browser does not draw a huge box (like it does with the <code>left:-9999px;</code> technique) and no weird outline either.</li>
+                  <li>Hidden element does not interfere with page flow.</li>
+                </ul>
+                <p>Chouchenn also provides a reverse mixin called <a href="#hideReset"><code>hide-reset()</code></a> to cancel the hiding.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">h1 span<br/></span><span>  hide()</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">h1 span</span><span> {<br/></span><span class="prop">  clip:</span><span> rect(0 0 0 0);<br/></span><span class="prop">  height:</span><span> 1px;<br/></span><span class="prop">  margin:</span><span> -1px;<br/></span><span class="prop">  overflow:</span><span> hidden;<br/></span><span class="prop">  padding:</span><span> 0;<br/></span><span class="prop">  position:</span><span> absolute;<br/></span><span class="prop">  width:</span><span> 1px;<br/></span><span>}</span></code></pre>
+                </div>
+              </article>
+              <article id="hideReset">
+                <h3>Hide-Reset</h3>
+                <p>Cancels out the effects of the <a href="#hide"><code>hide()</code></a> mixin.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">h1 span<br/></span><span>  hide-reset()</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">h1 span</span><span> {<br/></span><span class="prop">  clip:</span><span> auto;<br/></span><span class="prop">  height:</span><span> auto;<br/></span><span class="prop">  margin:</span><span> 0;<br/></span><span class="prop">  overflow:</span><span> visible;<br/></span><span class="prop">  position:</span><span> static;<br/></span><span class="prop">  width:</span><span> auto;<br/></span><span>}</span></code></pre>
+                </div>
+              </article>
+              <article id="triangle">
+                <h3>Triangle</h3>
+                <p>Generates CSS triangles.<br/>Available direction values: <code>up</code>, <code>down</code>, <code>left</code>, <code>right</code>, <code>up-left</code>, <code>up-right</code>, <code>down-left</code> and <code>down-right</code>.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">span</span><span class="class">.triangle<br/></span><span>  triangle(</span><span class="param"> 25px</span><span>,</span><span class="param"> #808080</span><span>,</span><span class="param"> up-right</span><span> )</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">div</span><span> {<br/></span><span class="prop">  border-left:</span><span class="param"> 25px solid transparent;<br/></span><span class="prop">  border-top:</span><span class="param"> 25px solid #808080;<br/></span><span class="prop">  height:</span><span> 0;<br/></span><span class="prop">  width:</span><span> 0;<br/></span><span>}</span></code></pre>
+                </div>
+                <p class="ex-intro">Example:</p>
+                <ul class="triangles">
+                  <li><span class="up"></span>
+                    <p>up</p>
+                  </li>
+                  <li><span class="down"></span>
+                    <p>down</p>
+                  </li>
+                  <li><span class="left"></span>
+                    <p>left</p>
+                  </li>
+                  <li><span class="right"></span>
+                    <p>right</p>
+                  </li>
+                  <li><span class="up-left"></span>
+                    <p>up-left</p>
+                  </li>
+                  <li><span class="up-right"></span>
+                    <p>up-right</p>
+                  </li>
+                  <li><span class="down-left"></span>
+                    <p>down-left</p>
+                  </li>
+                  <li><span class="down-right"></span>
+                    <p>down-right</p>
+                  </li>
+                </ul>
+              </article>
+              <article id="timing">
+                <h3>Timing-Functions</h3>
+                <p>Defines variables to extend the timing functions initially provided by CSS (based upon jQuery UI timing functions).<br/>Chouchenn provides variants for <code>ease-in</code>, <code>ease-out</code> and <code>ease-in-out</code> to use in your stylesheets:</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">div<br/></span><span class="prop">  transition:</span><span class="param"> width 1.2s ease-in-out-quart</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">div</span><span> {<br/></span><span class="prop">  transition:</span><span class="param"> width 1.2s</span><span class="param mandatory"> cubic-bezier(0.77, 0, 0.175, 1)</span><span>;<br/></span><span>}</span></code></pre>
+                </div>
+                <p class="ex-intro">All available timing functions:</p>
+                <div class="exemple">
+                  <ul class="quad">
+                    <li><span>ease-in-quad</span></li>
+                    <li><span>ease-out-quad</span></li>
+                    <li><span>ease-in-out-quad</span></li>
+                  </ul>
+                  <ul class="cubic">
+                    <li><span>ease-in-cubic</span></li>
+                    <li><span>ease-out-cubic</span></li>
+                    <li><span>ease-in-out-cubic</span></li>
+                  </ul>
+                  <ul class="quart">
+                    <li><span>ease-in-quart</span></li>
+                    <li><span>ease-out-quart</span></li>
+                    <li><span>ease-in-out-quart</span></li>
+                  </ul>
+                  <ul class="quint">
+                    <li><span>ease-in-quint</span></li>
+                    <li><span>ease-out-quint</span></li>
+                    <li><span>ease-in-out-quint</span></li>
+                  </ul>
+                  <ul class="sine">
+                    <li><span>ease-in-sine</span></li>
+                    <li><span>ease-out-sine</span></li>
+                    <li><span>ease-in-out-sine</span></li>
+                  </ul>
+                  <ul class="expo">
+                    <li><span>ease-in-expo</span></li>
+                    <li><span>ease-out-expo</span></li>
+                    <li><span>ease-in-out-expo</span></li>
+                  </ul>
+                  <ul class="circ">
+                    <li><span>ease-in-circ</span></li>
+                    <li><span>ease-out-circ</span></li>
+                    <li><span>ease-in-out-circ</span></li>
+                  </ul>
+                  <ul class="back">
+                    <li><span>ease-in-back</span></li>
+                    <li><span>ease-out-back</span></li>
+                    <li><span>ease-in-out-back</span></li>
+                  </ul>
+                </div>
+              </article>
+            </section>
+            <section id="texts" class="cats">
+              <h2>Text and Font Properties</h2>
+              <article id="fontface">
+                <h3>Font-Face</h3>
+                <p>Easy and shorter way to import your different custom fonts. Please refer to the <a href="#settings">Settings</a> section to understand how to change the font types and their order.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">$url =</span><span class="param">'/fonts/Source_Sans_Pro/'<br/></span><span class="tag">$name =</span><span class="param">'SourceSansPro-Regular'<br/></span><span class="prop">fontface</span><span>(</span><span class="param"> SourceSansPro</span><span>,</span><span class="param"> '/fonts/Source_Sans_Pro/SourceSansPro-Regular'</span><span> )<br/></span><span class="prop">fontface</span><span>(</span><span class="param"> SourceSansPro</span><span>,</span><span class="tag"> $url</span><span> +</span><span class="tag"> $name</span><span> )<br/></span><span class="prop">fontface</span><span>(</span><span class="param"> SourceSansPro</span><span>,</span><span class="param"> '/fonts/Source_Sans_Pro/SourceSansPro-Bold'</span><span>,</span><span class="param"> bold</span><span> )<br/></span><span class="prop">fontface</span><span>(</span><span class="param"> SourceSansPro</span><span>,</span><span class="param"> '/fonts/Source_Sans_Pro/SourceSansPro-Italic'</span><span>,</span><span class="param"> normal</span><span>,</span><span class="param"> italic</span><span> )<br/></span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag mandatory">@font-face</span><span>{<br/></span><span class="prop">  font-family:</span><span> SourceSansPro;<br/></span><span class="prop">  font-style:</span><span> normal;<br/></span><span class="prop">  font-weight:</span><span> normal;<br/></span><span class="prop">  src:</span><span> url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.eot");<br/></span><span class="prop">  src:</span><span> url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.eot?#iefix") format("embedded-opentype"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.woff") format("woff"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf") format("truetype"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.svg#SourceSansPro") format("svg");<br/></span><span>}<br/><br/></span><span class="tag mandatory">@font-face</span><span>{<br/></span><span class="prop">  font-family:</span><span> SourceSansPro;<br/></span><span class="prop">  font-style:</span><span> normal;<br/></span><span class="prop">  font-weight:</span><span> normal;<br/></span><span class="prop">  src:</span><span> url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.eot");<br/></span><span class="prop">  src:</span><span> url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.eot?#iefix") format("embedded-opentype"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.woff") format("woff"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf") format("truetype"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.svg#SourceSansPro") format("svg");<br/></span><span>}<br/><br/></span><span class="tag mandatory">@font-face</span><span>{<br/></span><span class="prop">  font-family:</span><span> SourceSansPro;<br/></span><span class="prop">  font-style:</span><span> normal;<br/></span><span class="prop">  font-weight:</span><span> normal;<br/></span><span class="prop">  src:</span><span> url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.eot");<br/></span><span class="prop">  src:</span><span> url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.eot?#iefix") format("embedded-opentype"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.woff") format("woff"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf") format("truetype"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.svg#SourceSansPro") format("svg");<br/></span><span>}<br/><br/></span><span class="tag mandatory">@font-face</span><span>{<br/></span><span class="prop">  font-family:</span><span> SourceSansPro;<br/></span><span class="prop">  font-style:</span><span> normal;<br/></span><span class="prop">  font-weight:</span><span> normal;<br/></span><span class="prop">  src:</span><span> url("/fonts/Source_Sans_Pro/SourceSansPro-Italic.eot");<br/></span><span class="prop">  src:</span><span> url("/fonts/Source_Sans_Pro/SourceSansPro-Italic.eot?#iefix") format("embedded-opentype"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Italic.woff") format("woff"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf") format("truetype"),<br/></span><span>url("/fonts/Source_Sans_Pro/SourceSansPro-Italic.svg#SourceSansPro") format("svg");<br/></span><span>}<br/><br/></span></code></pre>
+                </div>
+              </article>
+              <article id="lh">
+                <h3>Line Height</h3>
+                <p>Does the <code>line-height</code> maths for you. The mixins takes the context <code>font-size</code> value as a unique parameter.<br/>This mixin adds the <code>$lh-base</code> variable value to the <code>font-size</code> provided, divides the sum by the font-size value and returns the result of the calculation. <code>$lh-base</code> defaults to 4.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="com">// let's assume the font-size is 28px<br/></span><span class="tag">p<br/></span><span class="prop">  line-height:</span><span> lh(</span><span class="param"> 28</span><span> )</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">p</span><span> {<br/></span><span class="prop">  line-height:</span><span> 1.143;<br/></span><span>}</span></code></pre>
+                </div>
+              </article>
+              <article id="em-size">
+                <h3>EM Size</h3>
+                <p>Returns the result of the calculation in <code>em</code>s.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">p<br/></span><span class="prop">  font-size:</span><span> em(</span><span class="param"> 12</span><span> /</span><span class="param"> 16</span><span> )</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">p</span><span> {<br/></span><span class="prop">  font-size:</span><span> 0.75em;<br/></span><span>}</span></code></pre>
+                </div>
+              </article>
+              <article id="rem-size">
+                <h3>REM Size</h3>
+                <p>Returns the value passed as a parameter in <code>rem</code>. Uses the <code>$rem-base</code> variable to do the maths (in case you redefine the root <code>font-size</code> of the page). This variable defaults to 16px.</p>
+                <p class="ex-intro">What you write:</p>
+                <div class="code">
+                  <pre><code><span class="tag">p<br/></span><span class="prop">  font-size:</span><span> rem(</span><span class="param"> 10</span><span> )</span></code></pre>
+                </div>
+                <p class="ex-intro">What you get:</p>
+                <div class="code">
+                  <pre><code><span class="tag">p</span><span> {<br/></span><span class="prop">  font-size:</span><span> 0.625rem;<br/></span><span>}</span></code></pre>
+                </div>
+              </article>
+            </section>
+          </section>
+          <section id="settings">
+            <h1>Settings</h1>
+            <p>In addition to the mixins, Chouchenn provides several configuration settings to give you more control over the way mixins behave.</p>
+            <ul>
+              <li><code>$font-type</code>: sets the font-face formats and their order. Used in the <a href="#fontface">font-face mixin</a>.</li>
+              <li><code>$rounding</code>: adjusts the <a href="#round">rounding mixin</a> decimal numbers.</li>
+              <li><code>$lh-base</code>: sets the value added to the font-size of the <a href="#lh">line-height mixin</a>.</li>
+              <li><code>$rem-base</code>: sets the base font-size reference for the <a href="#rem-size">rem-size mixin</a>.</li>
+            </ul>
+            <p class="ex-intro">Global variables default values:</p>
+            <div class="code">
+              <pre><code><span class="param">$font-type</span><span>     ?= eot woff ttf svg<br/></span><span class="param">$rounding</span><span>      ?= 3<br/></span><span class="param">$lh-base</span><span>       ?= 4<br/></span><span class="param">$rem-base</span><span>      ?= 16</span></code></pre>
+            </div>
+          </section>
+          <section id="tips">
+            <h1>Switch's tips</h1>
+            <p>Chouchenn is a tool library. It is not (and never will be) intended to support prefixes or special syntaxes, etc. There are better tools for this (like <a href="https://github.com/postcss/autoprefixer">autoprefixer</a>) and we strongly encourage you to use them in addition of Chouchenn.</p>
+          </section>
+          <section id="licence">
+            <h1>Licence</h1>
+            <p>Chouchenn is free software and licenced under the BSD licence. For more details, please refer to the LICENCE file.</p>
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer id="footer" role="contentinfo">
+      <h1>Credits</h1>
+      <p>Chouchenn is brought to you by <a href="http://switch-company.com" title="Visit our company website">Switch</a>, a small front-end development company based in Paris. Come and say hi on <a href="https://twitter.com/switch_company">Twitter</a>.</p>
+      <p>Switch — 2015</p>
+    </footer>
+    <script src="en_US/js/config.js"></script>
+    <script src="en_US/js/scripts.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-37333297-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
