@@ -10,7 +10,12 @@
   "scripts": {
     "start": "npm install && grunt dev && grunt concurrent:start"
   },
-  "keywords": [ "stylus", "css", "mixins", "utilities" ],
+  "keywords": [
+    "stylus",
+    "css",
+    "mixins",
+    "utilities"
+  ],
   "bugs": {
     "url": "https://github.com/Switch-Company/chouchenn/issues",
     "email": "chouchenn@switch.paris"
