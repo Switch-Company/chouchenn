@@ -61,7 +61,7 @@
     "grunt-contrib-uglify": "0.9.1",
     "grunt-contrib-watch": "0.6.1",
     "grunt-git-revision": "0.0.1",
-    "grunt-modernizr": "0.6.0",
+    "grunt-modernizr": "https://github.com/metaloha/grunt-modernizr/tarball/v2-fallback",
     "grunt-nodemon": "0.4.0",
     "grunt-notify": "0.4.1",
     "grunt-sftp-deploy": "0.2.2",
