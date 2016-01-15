@@ -1,5 +1,7 @@
 footer#footer( role="contentinfo" )
-  h1!=home.footer.title
+  h1
+    +icon('dots')
+    !=home.footer.title
   each item in home.footer.texts
     p!= item
 

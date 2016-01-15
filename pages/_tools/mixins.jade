@@ -7,3 +7,7 @@ mixin not-ie()
   | <!--[if (gte IE 9)|!IE]><!-->
   block
   | <!--<![endif]-->
+
+mixin icon( type )
+  svg( class="icon-" + type  aria-hidden="true" )
+    use( xlink:href="#icon-" + type )

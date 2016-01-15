@@ -12,6 +12,7 @@ block content
       a(href=""+ home.intro.git +"").button!= home.intro.buttons.repo
   div.content
     button( aria-controls="nav" aria-expanded='false')
+      +icon('nav')
       span Menu
     nav#nav( role="navigation" )
       a.logo(href="#header")
@@ -34,7 +35,9 @@ block content
     div.doc
       each val in home.categories.list
         section(id=""+ val.id +"")
-          h1!= val.name
+          h1
+            +icon('dots')
+            != val.name
           if val.text
             p!= val.text
           if val.texts

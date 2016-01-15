@@ -10,28 +10,17 @@ header[role="banner"]
    padding-bottom: $padding-header
    width: 300px
 
-   &:before
-      background-image: url($url-img logo-start.png)
-      background-repeat: no-repeat
-      background-size: contain
-      content: ""
-      display: inline-block
+   [class*="icon-bracket"]
+      fill: $grey
       height: 100px
       position: absolute
-      width:50px
-
-   &:after
-      background-image: url($url-img logo-end.png)
-      background-position: 25px 0px
-      background-repeat: no-repeat
-      background-size: contain
-      content: ""
-      display: inline-block
-      height: 100px
-      position: absolute
+      top: $padding-header
+      width: 24px
+   .icon-bracket-open
+      left: 0
+   .icon-bracket-close
       right: 0
-      top:$padding-header
-      width:50px
+
    > h1
    > p
       font-family: $font-family
