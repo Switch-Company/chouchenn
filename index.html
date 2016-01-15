@@ -40,9 +40,17 @@
     <script src="en_US/js/modernizr.js"></script>
   </head>
   <body vocab="http://schema.org/" typeof="WebPage" class="home">
+    <div aria-hidden="true" class="icons"><svg width="0" height="0" style="position:absolute"><symbol viewBox="0 0 5.651 24" id="icon-bracket-close"><path d="M2.685 10.814c.124.28.325.522.604.728.277.206.744.354 1.24.478-.496.124-.965.272-1.242.48-.28.206-.48.45-.603.727a2.81 2.81 0 0 0-.218 1.007c-.02.392-.057.826-.057 1.32V20.5c0 .988-.098 1.48-.345 1.996-.248.516-1.344.8-2.066.8V24c.597 0 1.432-.05 1.866-.154.433-.104.8-.29 1.1-.557.298-.27.514-.668.648-1.193.135-.526.202-1.2.202-2.026v-4.95c0-.825.118-1.5.356-2.027.238-.526.88-.916 1.478-1.08-.598-.166-1.24-.557-1.478-1.084-.237-.528-.355-1.203-.355-2.028V3.95c0-.825-.068-1.5-.203-2.027-.133-.527-.348-.923-.65-1.19a2.46 2.46 0 0 0-1.097-.56C1.434.072.6 0 0 0v.707c.723 0 1.816.326 2.063.84.248.515.346 1.006.346 1.996v4.944c0 .495.036.93.057 1.32.02.393.093.73.216 1.007h.002z"/></symbol><symbol viewBox="0 0 5.651 24" id="icon-bracket-open"><path d="M2.97 10.814c.122-.28.194-.615.215-1.006.02-.39.058-.826.058-1.32V3.54c0-.99.098-1.48.346-1.995.246-.515 1.34-.84 2.062-.84V0c-.6 0-1.434.07-1.867.174-.433.104-.8.29-1.098.558-.3.268-.517.664-.65 1.19-.136.526-.204 1.203-.204 2.028V8.9c0 .826-.118 1.5-.355 2.028-.237.527-.88.917-1.478 1.082.598.165 1.24.555 1.478 1.08.237.528.356 1.203.356 2.028v4.95c0 .826.067 1.5.202 2.027.134.525.35.923.65 1.192.297.268.665.453 1.098.557.435.106 1.27.156 1.867.156v-.705c-.72 0-1.817-.284-2.065-.8-.247-.516-.345-1.008-.345-1.997v-4.944c0-.495-.038-.93-.057-1.32a2.81 2.81 0 0 0-.218-1.008 1.836 1.836 0 0 0-.603-.728c-.277-.206-.746-.354-1.24-.48.494-.123.96-.27 1.24-.477.278-.205.48-.448.603-.727h.004z"/></symbol><symbol viewBox="-19.625 -6 87.5 24" id="icon-dots"><path d="M55.875-6c-6.62 0-12 5.38-12 12s5.38 12 12 12 12-5.38 12-12-5.38-12-12-12zm0 18c-3.31 0-6-2.69-6-6 0-3.308 2.69-6 6-6s6 2.692 6 6c0 3.31-2.69 6-6 6zm-68-13.5c-4.136 0-7.5 3.364-7.5 7.5 0 4.133 3.364 7.5 7.5 7.5s7.5-3.367 7.5-7.5c0-4.136-3.364-7.5-7.5-7.5zm0 14c-3.584 0-6.5-2.916-6.5-6.5s2.916-6.5 6.5-6.5 6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5zm32-14c-4.136 0-7.5 3.364-7.5 7.5 0 4.133 3.364 7.5 7.5 7.5s7.5-3.367 7.5-7.5c0-4.136-3.364-7.5-7.5-7.5zm0 14c-3.584 0-6.5-2.916-6.5-6.5s2.916-6.5 6.5-6.5 6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5z"/></symbol><symbol viewBox="0 0 29.333 24" id="icon-nav"><path d="M0 24h29.333v-5.333H0V24zm0-9.333h29.333V9.333H0v5.334zM0 0v5.333h29.333V0H0z"/></symbol></svg>
+    </div>
     <header id="header" role="banner">
+      <svg aria-hidden="true" class="icon-bracket-open">
+        <use xlink:href="#icon-bracket-open"></use>
+      </svg>
       <h1>Chouchenn</h1>
       <p>By <span>Switch</span></p>
+      <svg aria-hidden="true" class="icon-bracket-close">
+        <use xlink:href="#icon-bracket-close"></use>
+      </svg>
     </header>
     <main role="main">
       <div class="intro">
@@ -50,7 +58,11 @@
         <div class="buttons"><a href="#documentation" class="button">Read documentation</a><a href="https://github.com/Switch-Company/chouchenn" class="button">View on Github</a></div>
       </div>
       <div class="content">
-        <button aria-controls="nav" aria-expanded="false"><span>Menu</span></button>
+        <button aria-controls="nav" aria-expanded="false">
+          <svg aria-hidden="true" class="icon-nav">
+            <use xlink:href="#icon-nav"></use>
+          </svg><span>Menu</span>
+        </button>
         <nav id="nav" role="navigation"><a href="#header" class="logo"><img src="en_US/media/img/logo.png" width="230" height="60" alt=""></a>
           <ul>
             <li><a href="#presentation">About</a>
@@ -103,7 +115,11 @@
         </nav>
         <div class="doc">
           <section id="presentation">
-            <h1>About</h1>
+            <h1>
+              <svg aria-hidden="true" class="icon-dots">
+                <use xlink:href="#icon-dots"></use>
+              </svg>About
+            </h1>
             <p>Chouchenn is a very lightweight mixin library for <a href="https://learnboost.github.io/stylus/">Stylus</a>. It provides tools to help day-to-day CSS coding:</p>
             <ul>
               <li>maths and dimensions</li>
@@ -113,7 +129,11 @@
             </ul>
           </section>
           <section id="install">
-            <h1>Basic Installation</h1>
+            <h1>
+              <svg aria-hidden="true" class="icon-dots">
+                <use xlink:href="#icon-dots"></use>
+              </svg>Basic Installation
+            </h1>
             <p>You can download Chouchenn or clone it from the <a href="https://github.com/Switch-Company/chouchenn">Github repository</a>. The main files are located in the <code>lib/chouchenn/</code> folder.</p>
             <ul>
               <li>Drop Chouchenn in your project folder (even the root index.styl file).</li>
@@ -122,7 +142,11 @@
             </ul>
           </section>
           <section id="npmInstall">
-            <h1>Install via NPM</h1>
+            <h1>
+              <svg aria-hidden="true" class="icon-dots">
+                <use xlink:href="#icon-dots"></use>
+              </svg>Install via NPM
+            </h1>
             <p>Chouchenn is also available through NPM.</p>
             <ul>
               <li>Install it via <code>npm install chouchenn</code>.</li>
@@ -135,7 +159,11 @@
             </div>
           </section>
           <section id="documentation">
-            <h1>Documentation</h1>
+            <h1>
+              <svg aria-hidden="true" class="icon-dots">
+                <use xlink:href="#icon-dots"></use>
+              </svg>Documentation
+            </h1>
             <section id="maths-dimensions" class="cats">
               <h2>Maths and Dimensions</h2>
               <article id="percent">
@@ -389,7 +417,11 @@
             </section>
           </section>
           <section id="settings">
-            <h1>Settings</h1>
+            <h1>
+              <svg aria-hidden="true" class="icon-dots">
+                <use xlink:href="#icon-dots"></use>
+              </svg>Settings
+            </h1>
             <p>In addition to the mixins, Chouchenn provides several configuration settings to give you more control over the way mixins behave.</p>
             <ul>
               <li><code>$font-type</code>: sets the font-face formats and their order. Used in the <a href="#fontface">font-face mixin</a>.</li>
@@ -403,18 +435,30 @@
             </div>
           </section>
           <section id="tips">
-            <h1>Switch's tips</h1>
+            <h1>
+              <svg aria-hidden="true" class="icon-dots">
+                <use xlink:href="#icon-dots"></use>
+              </svg>Switch's tips
+            </h1>
             <p>Chouchenn is a tool library. It is not (and never will be) intended to support prefixes or special syntaxes, etc. There are better tools for this (like <a href="https://github.com/postcss/autoprefixer">autoprefixer</a>) and we strongly encourage you to use them in addition of Chouchenn.</p>
           </section>
           <section id="licence">
-            <h1>Licence</h1>
+            <h1>
+              <svg aria-hidden="true" class="icon-dots">
+                <use xlink:href="#icon-dots"></use>
+              </svg>Licence
+            </h1>
             <p>Chouchenn is free software and licenced under the BSD licence. For more details, please refer to the LICENCE file.</p>
           </section>
         </div>
       </div>
     </main>
     <footer id="footer" role="contentinfo">
-      <h1>Credits</h1>
+      <h1>
+        <svg aria-hidden="true" class="icon-dots">
+          <use xlink:href="#icon-dots"></use>
+        </svg>Credits
+      </h1>
       <p>Chouchenn is brought to you by <a href="http://switch-company.com" title="Visit our company website">Switch</a>, a small front-end development company based in Paris. Come and say hi on <a href="https://twitter.com/switch_company">Twitter</a>.</p>
       <p>Switch — 2015</p>
     </footer>
