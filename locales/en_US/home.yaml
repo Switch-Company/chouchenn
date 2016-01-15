@@ -12,8 +12,8 @@
     footer:
       title: Credits
       texts:
-        what: Chouchenn is brought to you by <a href="http://switch-company.com" title="Visit our company website">Switch</a>, a small front-end development company based in Paris. Come and say hi on <a href="https://twitter.com/switch_company">Twitter</a>.
-        copyright: Switch — 2015
+        what: 'Chouchenn is brought to you by <a href="http://switch-company.com" title="Visit our company website">Switch</a>, a small front-end development company based in Paris. Come and say hi on <a href="https://twitter.com/switch_company">Twitter</a>.'
+        copyright: Switch — 2016
 
     categories:
       list:
