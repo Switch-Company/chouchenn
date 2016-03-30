@@ -86,13 +86,13 @@ block content
                         each funct in item.example.values
                           ul(class=""+funct.name+"")
                             li
-                              span ease-in-#{funct.name}
+                              span $ease-in-#{funct.name}
 
                             li
-                              span ease-out-#{funct.name}
+                              span $ease-out-#{funct.name}
 
                             li
-                              span ease-in-out-#{funct.name}
+                              span $ease-in-out-#{funct.name}
 
                     if item.name === 'Triangle'
                       p.ex-intro!=val.exampleTitle
