@@ -51,9 +51,6 @@
     "test": "mocha",
     "start": "node test/server.js"
   },
-  "dependencies": {
-    "stylus": "^0.51.1"
-  },
   "engines": {
     "node": "*"
   },
@@ -62,6 +59,7 @@
     "connect": "^3.4.0",
     "jade": "^1.11.0",
     "mocha": "^2.2.5",
-    "should": "^7.0.1"
+    "should": "^7.0.1",
+    "stylus": "*"
   }
 }
